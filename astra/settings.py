@@ -80,7 +80,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "astra",
         "USER": "astra_admin",
-        "PASSWORD": "Priyanshu@99",
+        "PASSWORD": "password",
+        # "PASSWORD": "Priyanshu@99",
     }
 }
 
