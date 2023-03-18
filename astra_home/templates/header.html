@@ -1,0 +1,38 @@
+
+{% load static %}
+<header class="container">
+    <img src="{% static 'images/home_images/logo.png' %}"  alt="" class="nav-logo" />
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sponsors/">Sponsor</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="register/">Register</a>
+            </li>
+            {% if anon %}
+            <li class="nav-item">
+                <a class="nav-link" href="login/">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup/">Signup</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="logout/">Logout</a>
+            </li>
+
+            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href=""
+                    ><i class="fa-solid fa-user"></i
+                ></a>
+            </li>
+        </ul>
+    </nav>
+</header>

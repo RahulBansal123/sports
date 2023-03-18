@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IIITD SPORTS</title>
+
+        <link rel="stylesheet" href="{% static 'static_css/register.css' %}" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Kanit:wght@400;900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <script
+            src="https://kit.fontawesome.com/ec93551158.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <body>
+        <header class="container">
+            <img src="{% static 'images/home_images/logo.png' %}" alt="" class="nav-logo" />
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sponsors/">Sponsor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team/">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events/">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="register/">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""
+                            ><i class="fa-solid fa-user"></i
+                        ></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        {% for sport in sports %}
+        <section id="title">
+       
+            <div class="intro-div">
+                <div class="info">
+                    <h1 class="reg-sport">{{ sport.sportsName }}</h1>
+                    {% if sport.sportsType == "T" %}
+                    <h2 class="reg-info">MAX PLAYERS &ensp; {{ sport.maxPlayers }}</h2>
+                    {% endif %}
+                    <h2 class="reg-info">PRICE POOL &ensp; {{ sport.poolPrice }}</h2>
+                    <input type="hidden" id="sport_id" value=
+
+                    <div class="btn-div">
+                        <h2 onclick="location.href='addToCart/?sports_id={{ sport.id }}';" class="reg-btn" href="addToCart/?sports_id={{ sport.id }}" >REGISTER</h2>
+                    
+                        <h2 onClick="location.href='https://tr.ee/tFEbl2J-uL';" class="reg-btn">RULEBOOK</h2>
+                    </div>
+                    <div class="sport-img">
+                        <img src="{{ sport.imageUrl }}" alt="" class="im" />
+    
+                    </div>
+                </div>
+           
+            </div>
+        
+        </section>
+        {% endfor %}
+
+
+    </body>
+
+
+    
+
+        
+</html>

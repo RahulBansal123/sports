@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'static_css/login.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Tilt+Prism&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="heading">
+                <h1>Please fill in your details</h1>
+            </div>
+    
+            <div class="form">
+            <form method="POST" >
+                {% csrf_token %}
+                {% include 'alert.html' %}
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                <input type="password" id="password" name="password" placeholder="Phone"  required 
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}{:;'?/|.,])(?=.*[^\dA-Za-z]).{8,}" 
+                title="Must contain at least one number, one uppercase letter, one lowercase letter, one special character and be at least 8 or more characters long.">
+                
+            
+                <div class="submit">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+</body>
+</html>

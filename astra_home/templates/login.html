@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'static_css/login.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Tilt+Prism&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="heading">
+                <h1>LOGIN</h1>
+            </div>   
+            {% if error %}
+            <h2>{{ error }}</h2>
+            {% endif %}
+            <div class="form">
+            <form method="POST" >
+              {% csrf_token %} 
+              {% include 'alert.html' %}
+                <input  name="loginUsername" id="loginUsername" type="text" placeholder="Please enter your Username"  >
+                <input  name="loginPassword" id="loginPassword" placeholder="Password" type="password" required data-msg="Please enter your password">
+
+
+                <div class="submit">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+
+
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+<script>
+  var error = {{ error }}
+  console.log(error);
+  if(error != null){
+    window.alert(error)
+  }
+
+</script> 
+</html>

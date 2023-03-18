@@ -1,0 +1,130 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+
+.cart-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cart-details .details{
+    width: 75%;
+    height: 80%;
+}
+
+.cart-details .details .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 15px;
+}
+.cart-details .details .heading h1{
+    color: white;
+    font-size: 30px;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+}
+
+.info{
+    border: 1px solid #FFB800;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tilt Prism';
+    margin: 20px 0;
+}
+
+.info h1{
+    color: #FFB800;
+    margin: 15px 0;
+}
+
+.info .main-info{
+    width: 100%;
+    height: 150px;
+    background-color:  #F0E828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.info .main-info .right-info{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .main-info .right-info button{
+    width: 88%;
+    height: 30%;
+    background-color: #FFB800;
+    border: none;
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.info .main-info .left-info{
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+.info .main-info .left-info h1{
+    font-family: 'Oswald';
+    color: black;
+    font-size: 20px;
+
+}
+
+.left-info .main-div{
+    width: 33.33%;
+}
+
+.info .main-info .left-info .upper-div{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #FFB800;
+    /* margin-left: 40px; */
+}
+
+.info .main-info .left-info .lower-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #FFB800;
+
+}
+
+.payment{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.payment button{
+    width: 25%;
+    height: 40px;
+    background-color: #F0E828;
+    border: none;
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 20px;
+}

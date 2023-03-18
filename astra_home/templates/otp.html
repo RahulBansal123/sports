@@ -1,0 +1,126 @@
+
+{% load static %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IIITD SPORT</title>
+
+        <link rel="shortcut icon" href="{% static 'images/home_images/logo.png' %}"/>
+        <link rel="stylesheet" href="{% static 'static_css/style.css' %}" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Kanit:wght@100;400;900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.cdnfonts.com/css/american-captain-2"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/ec93551158.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <body>
+        <header class="container">
+            <img src="{% static 'images/home_images/logo.png' %}"  alt="" class="nav-logo" />
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sponsors/">Sponsor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team/">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events/">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register/">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""
+                            ><i class="fa-solid fa-user"></i
+                        ></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <section id="">
+
+            <div class="container-fluid px-3">
+                <div class="row min-vh-100">
+                  <div class="col-md-8 col-lg-6 col-xl-5 d-flex align-items-center">
+                    <div class="w-100 py-5 px-md-5 px-xxl-6 position-relative">
+                      <div class="mb-5 "> A 6-digit OTP has been sent to your registered email.
+                        <h2>Verify Your Account</h2> 
+                
+                        
+                      
+                      </div>
+                      <form class="form-validate" method = "POST">
+                        {% csrf_token %}
+                        {% include 'alert.html' %}
+                        <div class="mb-4">
+                          <label class="form-label" for="loginUsername"> Enter OTP</label>
+                          <input class="form-control" name="b1" id="loginUsername" type="text" placeholder="OTP" maxlength = "6" autocomplete="off" required data-msg="Please enter your User Name">
+                        </div>
+                  
+                        
+                        <!-- Submit-->
+                        <div class="d-grid">
+                          <button class="btn btn-lg btn-primary" type="submit">Verify</button>
+                        </div>
+                        
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-6 col-xl-7 d-none d-md-block">
+                    <!-- Image-->
+                    <div class="bg-cover h-100 me-n3" style="background-image: url(img/photo/photo-1497436072909-60f360e1d4b1.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+            
+            
+        </section>
+
+
+        <footer id="footer">
+            <div class="foot">
+            <div class="footer-div ">
+                <h1 class="footer-head yellow">PAGES</h1>
+                <p class="footer-p">Home</p>
+                <p class="footer-p">Sponsor</p>
+                <p class="footer-p">Contact</p>
+                <p class="footer-p">Team</p>
+            </div>
+            <div class="footer-div y"><h1 class="footer-head yellow">CONTACT</h1>
+                <p class="footer-p">sportscoordinator@iiitd.ac.in</p>
+                <p class="footer-p">IIITD, Okhla, Delhi</p></div>
+
+            <div class="footer-div"><h1 class="footer-head yellow">SOCIAL MEDIA</h1>
+                <p class="footer-p"><i class="fab fa-instagram ico yellow"></i>@iiitdsports</p>
+                <p class="footer-p"><i class="fab fa-twitter ico yellow"></i>@iiitdsports</p>
+                <p class="footer-p"><i class="fas fa-envelope ico yellow"></i>sportscoordinator@iiitd.ac.in</p>
+                <p class="footer-p"><i class="fab fa-facebook-f ico yellow"></i>@iiitdsports</p></div></div>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</html>
+

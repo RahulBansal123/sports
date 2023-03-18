@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'static_css/cart.css' %}" />
+    <link rel="stylesheet" href="{% static 'static_css/style.css' %}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Tilt+Prism&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <!-- navbar  -->
+
+    {% include 'header.html' %}
+    <div class="cart-details">
+        <div class="details">
+            <div class="heading">
+                <h1>CART DETAILS</h1>
+            </div>
+            {% for i in cart %}             
+            <div class="info">
+                <h1>{{ i.sport.sportName }}</h1>
+                <div class="main-info">
+                    <div class="left-info">
+                        <div class="main-div">
+                            <div class="upper-div">
+                                <h1>TEAM NAME</h1>z
+                            </div>
+                            <div class="lower-div">
+                                <h1>{{ i.teamName }}</h1>
+                            </div>
+                        </div>
+                        <div class="main-div">
+                            <div class="upper-div">
+                                <h1>TOTAL REGISTRATIONS</h1>
+                            </div>
+                            <div class="lower-div">
+                     
+                                <form action="/removeFromCart/?sports_id={{ i.sport.id }}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" id="custId" name="team-size" value={{ i.quantity }}>
+                                    <input type="submit" value="-">
+                                </form>
+                                  
+                                <h1>{{ i.quantity }}</h1>
+                      
+                                <form action="/addToCart/?sports_id={{ i.sport.id }}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" id="custId" name="team-size" value={{ i.quantity }}>
+                                    <input type="submit" value="+">
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="main-div">
+                            <div class="upper-div">
+                                <h1>REGISTRATION FEE</h1>
+                            </div>
+                            <div class="lower-div">
+                                <h1>&#8377;{{ userCart.cartAmount }}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-info">
+                        <button>EDIT DETAILS</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="payment">
+                <button onClick="paymentPage()">CONTINUE TO PAYMENT</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    function paymentPage() {
+        window.location.href="https://rzp.io/l/EXYcwIxYjn"
+    }
+ 
+
+</script>
+</html>

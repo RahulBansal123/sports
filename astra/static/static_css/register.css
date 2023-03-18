@@ -1,0 +1,161 @@
+.red{
+    color : #A40000}
+
+.yellow{
+    color: #FFB800;
+} 
+
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Kanit', sans-serif;
+    background-color: black;
+    margin: 0;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    margin: 0;
+}
+/* 
+#title{
+    margin: 2% 15% 0;
+    
+} */
+
+header{
+    background-color: #1A1B1C ;
+    /* position: fixed;  */
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1.5fr 1.5fr;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 1%;
+    /* box-shadow:0px 5px 10px black; */
+}
+
+nav{
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display:flex;
+}
+
+.nav-item{
+    margin-right:  15%;
+    /* font-family: "kanit"; */
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #A40000;
+    border-bottom: 2px solid #A40000;
+    position: absolute;
+    transform: scale(0,1);
+    transition: transform ease-out 250ms;
+}
+
+.nav-link:hover::before{
+    transform: scale(1,1);
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #FFB800;
+}
+
+.nav-link:hover{
+    color: #A40000;
+}
+
+
+.nav-logo{
+    width: 25%;
+    /* border-radius: 50%; */
+    grid-column: 2 / 3;
+    cursor: pointer;
+}
+
+.intro-div{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    /* align-items: center; */
+    background-color: #1A1B1C ;
+    padding: 3% 0%;
+    width: 100vw;
+    height: 75vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sport-img{
+    width: 50%;
+    object-fit: contain;
+}
+
+.reg-sport{
+    color: #F9FF00;
+    font-size: 5rem;
+    padding-bottom: 10%;
+}
+
+.reg-info{
+    color: #FFAA00;
+    font-size: 1.75rem;
+}
+
+.reg-btn{
+    display: flex;
+    align-items: center;
+    background-color: #F9FF00;
+    padding: 0 3%;
+    transition: color,border,background-color ease-out 350ms;
+    cursor: pointer;
+}
+
+.btn-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top:17% ;
+}
+
+.im{
+    width: 100%;
+}
+
+.reg-btn:hover{
+    background-color: #1A1B1C;
+    border: solid 1px #F9FF00;
+    color: #F9FF00;
+    
+}

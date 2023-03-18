@@ -1,0 +1,114 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IIITD SPORTS</title>
+
+        <link rel="shortcut icon" href="{% static 'images/home_images/logo.png' %}"/>
+        <link rel="stylesheet" href="{% static 'static_css/style.css' %}" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Kanit:wght@100;400;900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.cdnfonts.com/css/american-captain-2"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/ec93551158.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <body>
+        {% include 'header.html' %}
+
+        <section id="title">
+            <div class="intro-div">
+                <h1 class="intro">UNLEASH THE <span>CHAMPION SPIRIT</span></h1>
+                <h1 class="intro date">17 - 19TH MARCH 2023</h1>
+            </div>
+        </section>
+
+        <section id="info">
+            <div class="info-div">
+                <div class="info-item">
+                    <h1 class="info head yellow">ABOUT ASTRA</h1>
+                    <h2 class="info sub">THE ANNUAL SPORTS FEST OF IIITD</h2>
+                    <p class="info para">
+                        Lorem ipsum dolor sit amet consectetur. Elementum donec
+                        eget convallis molestie enim fermentum morbi sed amet.
+                        Dignissim morbi lorem.Lorem ipsum dolor sit amet
+                        consectetur. Elementum donec eget convallis molestie
+                        enim fermentum morbi sed amet. Dignissim morbi
+                        lorem.Lorem ipsum dolor sit amet consectetur. Elementum
+                        donec eget convallis molestie enim fermentum morbi sed
+                        amet. Dignissim morbi lorem.Lorem ipsum dolor sit amet
+                        consectetur. Elementum donec eget convallis molestie
+                        enim fermentum morbi sed amet. Dignissim morbi lorem.
+                    </p>
+                </div>
+
+                <div class="">
+                    <img src="{% static 'images/home_images/logo2.png' %}"alt="" class="info-img" />
+                </div>
+            </div>
+
+            <div class="sport-div">
+                <img src="{% static 'images/home_images/basketball.png' %}" alt="" class="sport">
+                <img src="{% static 'images/home_images/Cricket.png' %}" alt="" class="sport">
+                <img src="{% static 'images/home_images/Football.png' %}" alt="" class="sport">
+                <img src="{% static 'images/home_images/hockey.png' %}" alt="" class="sport">
+            </div>
+            </div>
+
+            <div class="stat-div">
+                <h1 class="info head stat-head">PROJECTED STATISTICS</h1>
+                <div class="stats yellow">
+                    <div class="stat"><h1>10000+</h1>
+                    <img src="{% static 'images/home_images/footfall.png' %}"alt=""></div>
+                    <div class="stat"><h1>5000+</h1>
+                        <img src="{% static 'images/home_images/merch.png' %}" alt=""></div>
+                    <div class="stat"><h1>50+</h1>
+                        <img src="{% static 'images/home_images/colleges.png' %}"alt=""></div>
+                </div>
+                <div class="stats yellow">
+                    <div class="stat"><h1>2M+</h1>
+                        <img src="{% static 'images/home_images/online_reach.png' %}" alt=""></div>
+                    <div class="stat"><h1>2000+</h1>
+                        <img src="{% static 'images/home_images/tshirt.png' %}" alt=""></div>
+                    <div class="stat"><h1>20+</h1>
+                        <img src="{% static 'images/home_images/events.png' %}"alt=""></div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer id="footer">
+            <div class="foot">
+            <div class="footer-div ">
+                <h1 class="footer-head yellow">PAGES</h1>
+                <p class="footer-p">Home</p>
+                <p class="footer-p">Sponsor</p>
+                <p class="footer-p">Contact</p>
+                <p class="footer-p">Team</p>
+            </div>
+            <div class="footer-div y"><h1 class="footer-head yellow">CONTACT</h1>
+                <p class="footer-p">sportscoordinator@iiitd.ac.in</p>
+                <p class="footer-p">IIITD, Okhla, Delhi</p></div>
+
+            <div class="footer-div"><h1 class="footer-head yellow">SOCIAL MEDIA</h1>
+                <p class="footer-p"><i class="fab fa-instagram ico yellow"></i>@iiitdsports</p>
+                <p class="footer-p"><i class="fab fa-twitter ico yellow"></i>@iiitdsports</p>
+                <p class="footer-p"><i class="fas fa-envelope ico yellow"></i>sportscoordinator@iiitd.ac.in</p>
+                <p class="footer-p"><i class="fab fa-facebook-f ico yellow"></i>@iiitdsports</p></div></div>
+        </footer>
+    </body>
+</html>
